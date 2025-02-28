@@ -1,0 +1,1 @@
+export const ORDER_KFC = "ORDER_KFC"

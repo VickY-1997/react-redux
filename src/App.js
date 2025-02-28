@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import KfcBox from './KfcBox'
+import PizzaBox from './PizzaBox'
+import {Provider} from "react-redux"
+import store from './component/redux/store'
+import CustomerChoice from '../src/component/CustomerChoice'
+// import HooksContainer from './component/redux/hooksContainer'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Provider store={store}>
+      <KfcBox/>
+      <PizzaBox/>
+      {/* <HooksContainer/> */}
+      <CustomerChoice/>
+    </Provider>
+  )
 }
 
-export default App;
+export default App
